@@ -15,8 +15,10 @@ body {
   -moz-box-sizing: border-box;
 }
 .page {
+  /* width: 215.9mm; */
   width: 210mm;
   min-height: 297mm;
+  /* min-height: 355.6mm; */
   padding: 7mm;
   margin: 10mm auto;
   border: 1px #d3d3d3 solid;
@@ -26,7 +28,7 @@ body {
 }
 
 @page {
-  size: A4;
+  size: A4 portrait;
   margin: 0;
 }
 @media print {
@@ -48,7 +50,7 @@ body {
 }
 
 .form-header {
-  height: 180px;
+  height: 170px;
   display: flex;
   justify-content: space-between;
   font-weight: 700;
@@ -66,6 +68,15 @@ body {
   justify-content: center;
   gap: 5px;
 }
+.form-header .location-title h2{
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: start;
+}
+.form-header .location-title h2 img{
+  width: 50px;
+}
 .form-header .location-title p {
   width: 100%;
 }
@@ -74,7 +85,12 @@ body {
   border-bottom: 3px dotted black;
 }
 .form-header .location-title .main-title {
-  border-bottom: #000 3px solid;
+  display: flex;
+  justify-content: center !important;
+  
+}
+.form-header .location-title .main-title span{
+ border-bottom: #000 3px solid;
 }
 .form-header .flat-info {
   width: 230px;
@@ -87,7 +103,6 @@ body {
 }
 .form-header .flat-info p {
   display: flex;
-
   gap: 5px;
 }
 .form-header .flat-info p .item-title {
@@ -99,6 +114,105 @@ body {
   border-bottom: 2px dotted black;
 }
 
-.form-body{
+.form-body {
+  margin-top: 15px;
   height: 100%;
+  width: 100%;
+}
+.form-body .body-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+.form-body .body-item div {
+  display: flex;
+}
+.form-body .body-item > div:nth-child(1)::before {
+  content: "১. ";
+}
+.form-body .body-item > div:nth-child(2)::before {
+  content: "২. ";
+}
+.form-body .body-item > div:nth-child(3)::before {
+  content: "৩. ";
+}
+.form-body .body-item > div:nth-child(4)::before {
+  content: "৪. ";
+}
+.form-body .body-item > div:nth-child(5)::before {
+  content: "৫. ";
+}
+.form-body .body-item > div:nth-child(6)::before {
+  content: "৬. ";
+}
+.form-body .body-item > div:nth-child(7)::before {
+  content: "৭. ";
+}
+.form-body .body-item > div:nth-child(8)::before {
+  content: "৮. ";
+}
+.form-body .body-item > div:nth-child(9)::before {
+  content: "৯. ";
+}
+.form-body .body-item > div > .rr:nth-child(1)::before {
+  content: "১০. ";
+}
+.form-body .body-item > div > .table:nth-child(1)::before {
+  content: "১১. ";
+}
+.form-body .body-item > div > .gg > p:nth-child(1)::before {
+  content: "১২. ";
+}
+.form-body .body-item > div> .DD >p:nth-child(1)::before {
+  content: "১৩. ";
+  display: inline-block;
+}
+.form-body .body-item > div> .pb:nth-child(1)::before {
+  content: "১৪. ";
+}
+.form-body .body-item > div:nth-child(15)::before {
+  content: "১৫. ";
+}
+.form-body .body-item > div:nth-child(16)::before {
+  content: "১৬. ";
+}
+.form-body .body-item > div:nth-child(17)::before {
+  content: "১৭. ";
+}
+.form-body .body-item div .item-title {
+  min-width: fit-content;
+}
+.form-body .body-item div .item-info {
+  width: 100%;
+  border-bottom: 2px dotted black;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+.form-footer {
+  margin-top: 15px;
+  width: 100%;
+}
+.form-footer .date-signature {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.form-footer .date-signature .date {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.form-footer .date-signature .date .item-title {
+  padding-top: 2px;
+  border-top: dotted 1px black;
 }
